@@ -1,0 +1,34 @@
+需求：获取1000个百度百科url，并将其url，title，简介输出到baike.html文件中
+
+实现方式：
+class spider_main: 主调度函数
+class manager:url管理器
+class download:内容下载器
+class parse:内容解析器
+class output:内容输出器
+
+问题：
+1，IndentationError: unexpected unindent
+对齐，缩进不合理
+2，html 编码 utf8
+<meta charset="UTF-8">
+3，UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-3: ordinal not in range(128)
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
+总结：
+知识点
+1，import urllib2
+可以下载url内容
+2，from bs4 import BeautifulSoup
+import re
+import urlparse
+BeautifulSoup 可解析网页内容
+re正则表达式
+3，爬虫爬取数据流程
+
+注意问题：
+编写程序时对齐，缩进统一对其方式
+变量初始化和使用（变量自动定义）
+异常处理
